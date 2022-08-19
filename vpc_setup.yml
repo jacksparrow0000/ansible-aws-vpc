@@ -24,7 +24,8 @@
          vpc_id: "{{vpcout.vpc.id}}"
          region: "{{region}}"
          az: "{{zone1}}"
-         state: "{{PubSub1Cidr}}"
+         state: "{{state}}"
+         cidr: "{{PubSub1Cidr}}"
          map_public: yes
          resources_tags:
            Name: vprofile-pubsub1
