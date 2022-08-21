@@ -220,19 +220,19 @@
           cntl ansible_host=127.0.0.1 ansible_connection=local
 
           [websrvgrp]
-          web01
+          web011
 
           [rmqsrvgrp]
-          rmq01
+          rmq011
 
           [mcsrvgrp]
-          mc01
+          mc011
 
           [dbsrvgrp]
-          db01
+          db011
 
           [control]
-          cntl
+          cntl1
 
           [stack_inst:children]
           websrvgrp
