@@ -105,7 +105,7 @@
           Project: Vprofile
           Owner: Devops Team
         group_id: "{{vproStackSG_out.group_id}}"
-        vpc_subnet_id: "{{PrivSub1d}}"
+        vpc_subnet_id: "{{PrivSub1id}}"
       register: app01_out
 
     - name: Creating memcache mc01
