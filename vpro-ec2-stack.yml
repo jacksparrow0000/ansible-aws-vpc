@@ -75,12 +75,12 @@
         wait: yes
         wait_timeout: 300
         instance_tags:
-          Name: "web01"
+          Name: "web011"
           Project: Vprofile
           Owner: Devops Team
         exact_count: 1
         count_tag:
-          Name: "web01"
+          Name: "web011"
           Project: Vprofile
           Owner: Devops Team
         group_id: "{{vproStackSG_out.group_id}}"
@@ -96,12 +96,12 @@
         wait: yes
         wait_timeout: 300
         instance_tags:
-          Name: "app01"
+          Name: "app011"
           Project: Vprofile
           Owner: Devops Team
         exact_count: 1
         count_tag:
-          Name: "app01"
+          Name: "app011"
           Project: Vprofile
           Owner: Devops Team
         group_id: "{{vproStackSG_out.group_id}}"
@@ -117,12 +117,12 @@
         wait: yes
         wait_timeout: 300
         instance_tags:
-          Name: "mc01"
+          Name: "mc011"
           Project: Vprofile
           Owner: Devops Team
         exact_count: 1
         count_tag:
-          Name: "mc01"
+          Name: "mc011"
           Project: Vprofile
           Owner: Devops Team
         group_id: "{{vproStackSG_out.group_id}}"
@@ -138,12 +138,12 @@
        wait: yes
        wait_timeout: 300
        instance_tags:
-         Name: "rmq01"
+         Name: "rmq011"
          Project: Vprofile
          Owner: Devops Team
        exact_count: 1
        count_tag:
-         Name: "rmq01"
+         Name: "rmq011"
          Project: Vprofile
          Owner: Devops Team
        group_id: "{{vproStackSG_out.group_id}}"
@@ -159,12 +159,12 @@
         wait: yes
         wait_timeout: 300
         instance_tags:
-          Name: "db01"
+          Name: "db011"
           Project: Vprofile
           Owner: DevOps Team
         exact_count: 1
         count_tag:
-          Name: "db01"
+          Name: "db011"
           Project: Vprofile
           Owner: DevOps Team
         group_id: "{{vproStackSG_out.group_id}}"
@@ -196,11 +196,11 @@
       blockinfile:
         path: provision-stack/group_vars/hostsip
         block: |
-          web01_ip: {{ web01_out.tagged_instances[0].private_ip }}
-          app01_ip: {{ app01_out.tagged_instances[0].private_ip }}
-          rmq01_ip: {{ rmq01_out.tagged_instances[0].private_ip }}
-          mc01_ip: {{ mc01_out.tagged_instances[0].private_ip }}
-          db01_ip: {{ db01_out.tagged_instances[0].private_ip }}
+          web011_ip: {{ web01_out.tagged_instances[0].private_ip }}
+          app011_ip: {{ app01_out.tagged_instances[0].private_ip }}
+          rmq011_ip: {{ rmq01_out.tagged_instances[0].private_ip }}
+          mc011_ip: {{ mc01_out.tagged_instances[0].private_ip }}
+          db011_ip: {{ db01_out.tagged_instances[0].private_ip }}
 
     - name: Copy login key to provision_stack directory
       copy:
@@ -212,11 +212,11 @@
       blockinfile:
         path: provision-stack/inventory-vpro
         block: |
-          web01 ansible_host={{ web01_out.tagged_instances[0].private_ip }}
-          app01 ansible_host={{ app01_out.tagged_instances[0].private_ip }}
-          rmq01 ansible_host={{ rmq01_out.tagged_instances[0].private_ip }}
-          mc01 ansible_host={{ mc01_out.tagged_instances[0].private_ip }}
-          db01 ansible_host={{ db01_out.tagged_instances[0].private_ip }}
+          web011 ansible_host={{ web01_out.tagged_instances[0].private_ip }}
+          app011 ansible_host={{ app01_out.tagged_instances[0].private_ip }}
+          rmq011 ansible_host={{ rmq01_out.tagged_instances[0].private_ip }}
+          mc011 ansible_host={{ mc01_out.tagged_instances[0].private_ip }}
+          db011 ansible_host={{ db01_out.tagged_instances[0].private_ip }}
           cntl ansible_host=127.0.0.1 ansible_connection=local
 
           [websrvgrp]
