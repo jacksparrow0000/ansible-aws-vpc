@@ -66,8 +66,6 @@
           - proto: all
             group_id: "{{vproStackSG_out.group_id}}"
 
-
-        sleep: 60
     - name: Creating Nginx web01
       ec2:
         key_name: vprokeyjjjjjk
