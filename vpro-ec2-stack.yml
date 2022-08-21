@@ -137,7 +137,7 @@
         image: "{{rmq_ami}}"
         wait: yes
         wait_timeout: 300
-        instance_type:
+        instance_tags:
           Name: "rmq01"
           Project: Vprofile
           Owner: DevOps Team
