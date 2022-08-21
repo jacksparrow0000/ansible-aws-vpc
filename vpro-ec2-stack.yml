@@ -131,7 +131,7 @@
 
     - name: Creating RabbitMQ rmq01
       ec2:
-        Key_name: vprokey
+        key_name: vprokey
         region: "{{region}}"
         instance_type: t2.micro
         image: "{{rmq_ami}}"
