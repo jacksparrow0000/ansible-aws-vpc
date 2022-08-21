@@ -24,15 +24,15 @@
 
     - name: Create Security Group for Load Balancer
       ec2-group:
-        name: vproELB-sg
-        description: Allow port 80 from everywhere and all port within sg
-        region: "{{region}}"
-        vpc_id: "{{vpcid}}"
-        rules:
-          - proto: tcp
-            from_port: 80
-            to_port: 80
-            cidr_ip: 0.0.0.0/0
+       name: vproELB-sg
+       description: Allow port 80 from everywhere and all port within sg
+       region: "{{region}}"
+       vpc_id: "{{vpcid}}"
+       rules:
+         - proto: tcp
+           from_port: 80
+           to_port: 80
+           cidr_ip: 0.0.0.0/0
       register: vproEBSG_out
 
 
