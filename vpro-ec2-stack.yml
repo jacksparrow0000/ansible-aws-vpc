@@ -66,6 +66,8 @@
           - proto: all
             group_id: "{{vproStackSG_out.group_id}}"
 
+
+        sleep: 60
     - name: Creating Nginx web01
       ec2:
         key_name: vprokeyjjjjjk
@@ -75,12 +77,12 @@
         wait: yes
         wait_timeout: 300
         instance_tags:
-          Name: "web011"
+          Name: "web0112"
           Project: Vprofile
           Owner: Devops Team
         exact_count: 1
         count_tag:
-          Name: "web011"
+          Name: "web0112"
           Project: Vprofile
           Owner: Devops Team
         group_id: "{{vproStackSG_out.group_id}}"
@@ -96,12 +98,12 @@
         wait: yes
         wait_timeout: 300
         instance_tags:
-          Name: "app011"
+          Name: "app0112"
           Project: Vprofile
           Owner: Devops Team
         exact_count: 1
         count_tag:
-          Name: "app011"
+          Name: "app0112"
           Project: Vprofile
           Owner: Devops Team
         group_id: "{{vproStackSG_out.group_id}}"
@@ -117,12 +119,12 @@
         wait: yes
         wait_timeout: 300
         instance_tags:
-          Name: "mc011"
+          Name: "mc0112"
           Project: Vprofile
           Owner: Devops Team
         exact_count: 1
         count_tag:
-          Name: "mc011"
+          Name: "mc0112"
           Project: Vprofile
           Owner: Devops Team
         group_id: "{{vproStackSG_out.group_id}}"
@@ -138,12 +140,12 @@
        wait: yes
        wait_timeout: 300
        instance_tags:
-         Name: "rmq011"
+         Name: "rmq0112"
          Project: Vprofile
          Owner: Devops Team
        exact_count: 1
        count_tag:
-         Name: "rmq011"
+         Name: "rmq0112"
          Project: Vprofile
          Owner: Devops Team
        group_id: "{{vproStackSG_out.group_id}}"
@@ -159,12 +161,12 @@
         wait: yes
         wait_timeout: 300
         instance_tags:
-          Name: "db011"
+          Name: "db0112"
           Project: Vprofile
           Owner: DevOps Team
         exact_count: 1
         count_tag:
-          Name: "db011"
+          Name: "db0112"
           Project: Vprofile
           Owner: DevOps Team
         group_id: "{{vproStackSG_out.group_id}}"
