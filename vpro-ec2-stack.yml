@@ -33,7 +33,7 @@
             from_port: 80
             to_port: 80
             cidr_ip: 0.0.0.0/0
-      register: vproEBSG1_out
+      register: vproEBSG_out
 
 
     - name: Create Security Group for Vprofile Stack
@@ -47,11 +47,11 @@
           - proto: tcp
             from_port: 80
             to_port: 80
-            group_id: "{{vproELBSG1_out.group_id}}"
+            group_id: "{{vproELBSG_out.group_id}}"
 
           - proto: tcp
             from_port: 22
             to_port: 22
-            group_id: "{{BastionSGid1}}"
+            group_id: "{{BastionSGid}}"
         register:
 
