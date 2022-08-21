@@ -131,23 +131,23 @@
 
     - name: Creating RabbitMQ rmq01
       ec2:
-        key_name: vprokey
-        region: "{{region}}"
-        instance_type: t2.micro
-        image: "{{rmq_ami}}"
-        wait: yes
-        wait_timeout: 300
-        instance_tags:
-          Name: "rmq01"
-          Project: Vprofile
-          Owner: DevOps Team
-        exact_count: 1
-        count_tag:
-          Name: "rmq01"
-          Project: Vprofile
-          Owner: DevOps Team
-        group_id: "{{vproStackSG_out.group.id}}"
-        vpc_subnet_id: "{{PrivSub1id}}"
+       key_name: vprokey
+       region: "{{region}}"
+       instance_type: t2.micro
+       image: "{{rmq_ami}}"
+       wait: yes
+       wait_timeout: 300
+       instance_tags:
+         Name: "rmq01"
+         Project: Vprofile
+         Owner: Devops Team
+       exact_count: 1
+       count_tag:
+         Name: "rmq01"
+         Project: Vprofile
+         Owner: Devops Team
+       group_id: "{{vproStackSG_out.group_id}}"
+       vpc_subnet_id: "{{PrivSub1id}}"
       register: rmq01_out
 
     - name: Creating Mysql db01
