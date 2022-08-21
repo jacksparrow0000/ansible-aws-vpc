@@ -100,7 +100,7 @@
           Project: Vprofile
           Owner: Devops Team
         exact_count: 1
-        count_tage:
+        count_tag:
           Name: "app01"
           Project: Vprofile
           Owner: Devops Team
