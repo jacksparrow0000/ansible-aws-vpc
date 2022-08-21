@@ -67,7 +67,7 @@
             group_id: "{{vproStackSG_out.group_id}}"
 
     - name: Creating Nginx web01
-      ec2:
+      ec2_instance:
         key_name: vprokeyjjjjjk
         region: "{{region}}"
         instance_type: t2.micro
@@ -75,12 +75,12 @@
         wait: yes
         wait_timeout: 300
         instance_tags:
-          Name: "web0112"
+          Name: "web01123"
           Project: Vprofile
           Owner: Devops Team
         exact_count: 1
         count_tag:
-          Name: "web0112"
+          Name: "web01123"
           Project: Vprofile
           Owner: Devops Team
         group_id: "{{vproStackSG_out.group_id}}"
@@ -88,7 +88,7 @@
       register: web01_out
 
     - name: Creating tomcat app01
-      ec2:
+      ec2_instance:
         key_name: vprokeyjjjjjk
         region: "{{region}}"
         instance_type: t2.micro
@@ -96,12 +96,12 @@
         wait: yes
         wait_timeout: 300
         instance_tags:
-          Name: "app0112"
+          Name: "app01123"
           Project: Vprofile
           Owner: Devops Team
         exact_count: 1
         count_tag:
-          Name: "app0112"
+          Name: "app01123"
           Project: Vprofile
           Owner: Devops Team
         group_id: "{{vproStackSG_out.group_id}}"
@@ -109,7 +109,7 @@
       register: app01_out
 
     - name: Creating memcache mc01
-      ec2:
+      ec2_instance:
         key_name: vprokeyjjjjjk
         region: "{{region}}"
         instance_type: t2.micro
@@ -117,12 +117,12 @@
         wait: yes
         wait_timeout: 300
         instance_tags:
-          Name: "mc0112"
+          Name: "mc01123"
           Project: Vprofile
           Owner: Devops Team
         exact_count: 1
         count_tag:
-          Name: "mc0112"
+          Name: "mc01123"
           Project: Vprofile
           Owner: Devops Team
         group_id: "{{vproStackSG_out.group_id}}"
@@ -130,7 +130,7 @@
       register: mc01_out
 
     - name: Creating RabbitMQ rmq01
-      ec2:
+      ec2_instance:
        key_name: vprokeyjjjjjk
        region: "{{region}}"
        instance_type: t2.micro
@@ -138,12 +138,12 @@
        wait: yes
        wait_timeout: 300
        instance_tags:
-         Name: "rmq0112"
+         Name: "rmq01123"
          Project: Vprofile
          Owner: Devops Team
        exact_count: 1
        count_tag:
-         Name: "rmq0112"
+         Name: "rmq01123"
          Project: Vprofile
          Owner: Devops Team
        group_id: "{{vproStackSG_out.group_id}}"
@@ -151,7 +151,7 @@
       register: rmq01_out
 
     - name: Creating Mysql db01
-      ec2:
+      ec2_instance:
         key_name: vprokeyjjjjjk
         region: "{{region}}"
         instance_type: t2.micro
@@ -159,12 +159,12 @@
         wait: yes
         wait_timeout: 300
         instance_tags:
-          Name: "db0112"
+          Name: "db01123"
           Project: Vprofile
           Owner: DevOps Team
         exact_count: 1
         count_tag:
-          Name: "db0112"
+          Name: "db01123"
           Project: Vprofile
           Owner: DevOps Team
         group_id: "{{vproStackSG_out.group_id}}"
